@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="topheader">
+        <h1>DojoWeather</h1><!--H1 tag for Dojo Weather-->
+        <ul id="htabs">
+            <li onclick="cityalert()">Burbank</li>
+            <li onclick="cityalert()">Chicago</li>
+            <li onclick="cityalert()">Dallas</li>
+        </ul><!--UL list for tabs-->
+    </div>
+    <div id="city_header">
+        <h2>San Jose</h2><!--H2 city name-->
+        <p>
+            show temperature in <select onchange="temp()"  name="temp" id="temp">
+                <option id="C" value="C">&deg;C</option>
+                <option id="F" value="F">&deg;F</option>
+            </select>
+        </p><!--temp dropdown-->
+    </div>
+    <div id="forecast">
+        <div class="forecasts" id="Today">
+            <h3>Today</h3><br><!--Today weather box-->
+            <img class="Wicons" src="assets/some_rain.png" alt="rainy"><br><br>
+            <p>some rain</p><br>
+            <div class="daytemps">
+                <p><span id="highs1">24</span>&deg;</p><!--Today temps-->
+                <p><span id="lows1">18</span>&deg;</p>
+            </div>
+        </div>
+        <div class="forecasts" id="Tomorrow">
+            <h3>Tomorrow</h3><br><!--Tommorrow weather-->
+            <img class="Wicons" src="assets/some_sun.png" alt="sunny"><br><br>
+            <p>some sun</p><br>
+            <div class="daytemps">
+                <p><span id="highs2">27</span>&deg;</p><!--Tomorrow temps-->
+                <p><span id="lows2">19</span>&deg;</p>
+            </div>
+        </div>
+        <div class="forecasts" id="Friday">
+            <h3>Friday</h3><br><!--Friday Weather-->
+            <img class="Wicons" src="assets/some_clouds.png" alt="cloudy"><br><br>
+            <p>some clouds</p><br>
+            <div class="daytemps">
+                <p><span id="highs3">21</span>&deg;</p><!--Friday temps-->
+                <p><span id="lows3">16</span>&deg;</p>
+            </div>
+        </div>
+        <div class="forecasts" id="Saturday">
+            <h3>Saturday</h3><br><!--Saturday Weather-->
+            <img class="Wicons" src="assets/some_sun.png" alt="sunny"><br><br>
+            <p>some sun</p><br>
+            <div class="daytemps">
+                <p><span id="highs4">26</span>&deg;</p><!--Saturday temps-->
+                <p><span id="lows4">21</span>&deg;</p>
+            </div>
+        </div>
+    </div>
+    <div id="cookies">
+        <div id="cookieh">
+            <h4>Stop! Cookie time</h4><!--Stop cookie time-->
+        </div>
+        <div id="cookiecontent">
+            <img id="cookiep" src="assets/cookie.png" alt="cookie"><!--img text button-->
+            <p id="this">We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analuse our traffic. <a href="">Read more...</a></p>
+            <button onclick="remove()" id="accept">I Accept</button>
+        </div><!--Cookies fixed banner,-->
+    </div>
+    <script src="dw.js"></script>
+</body>
+</html>
